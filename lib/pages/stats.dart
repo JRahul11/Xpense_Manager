@@ -1,4 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'package:xpense/stats/weekly.dart';
+import 'package:xpense/stats/monthly.dart';
+import 'package:xpense/stats/categorywise.dart';
 
 class Stats extends StatefulWidget {
   const Stats({Key? key}) : super(key: key);
@@ -10,12 +15,35 @@ class Stats extends StatefulWidget {
 class _StatsState extends State<Stats> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Stats')),
-      body: Center(
-        child: Text('Monthly and Pie Chart goes here',
-            style: TextStyle(fontSize: 40)),
-      ),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+          appBar: AppBar(
+            title: Text('Stats'),
+            bottom: TabBar(
+              tabs: [
+                Tab(
+                  text: 'Weekly',
+                  icon: Icon(CupertinoIcons.chart_bar),
+                ),
+                Tab(
+                  text: 'Monthly',
+                  icon: Icon(CupertinoIcons.graph_square),
+                ),
+                Tab(
+                  text: 'Categorywise',
+                  icon: Icon(CupertinoIcons.chart_pie),
+                ),
+              ],
+            ),
+          ),
+          body: TabBarView(
+            children: [
+              Weekly(),
+              Monthly(),
+              Categorywise(),
+            ],
+          )),
     );
   }
 }
