@@ -11,7 +11,7 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   
-//int _date = 16;
+int _date = 23;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -179,7 +179,7 @@ class _DashboardState extends State<Dashboard> {
                                 Padding(
                                   padding: const EdgeInsets.only(
                                     top:10,
-                                    bottom: 11,
+                                    bottom: 10,
                                   ),
                                   child: Text("Transactions",
                                     style: TextStyle(
@@ -188,29 +188,29 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                   ),
                                 ),
-                                // Padding(
-                                //   padding: const EdgeInsets.all(16),
-                                //   child: Row(
-                                //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                //     children: <Widget>[
-                                //       InkWell(
-                                //         onTap: () => setState(() => _date--),
-                                //         child: const Icon(Icons.arrow_left),
-                                //       ),
-                                //       Text(
-                                //         '$_date ${DateFormat('MMMM yyyy').format(DateTime.now())}',
-                                //         style: const TextStyle(
-                                //         fontSize: 17,
-                                //         fontWeight: FontWeight.bold,
-                                //         ),
-                                //       ),
-                                //       InkWell(
-                                //         onTap: () => setState(() => _date++),
-                                //         child: const Icon(Icons.arrow_right),
-                                //       ),
-                                //     ],
-                                //   ),
-                                // ),
+                                Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: <Widget>[
+                                      InkWell(
+                                        onTap: () => setState(() => _date--),
+                                        child: const Icon(Icons.arrow_left),
+                                      ),
+                                      Text(
+                                        '$_date ${DateFormat('MMMM yyyy').format(DateTime.now())}',
+                                        style: const TextStyle(
+                                        fontSize: 17,
+                                        fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      InkWell(
+                                        onTap: () => setState(() => _date++),
+                                        child: const Icon(Icons.arrow_right),
+                                      ),
+                                    ],
+                                  ),
+                                ),
 
                                 Expanded(
                                   child: ListView.builder(
@@ -243,7 +243,7 @@ class Transaction {
   final IconData iconData;
   final Color color;
   //final int date; 
-  final DateTime date;
+  //final DateTime date;
 
   const Transaction({
     required this.title,
@@ -251,7 +251,7 @@ class Transaction {
     required this.category,
     required this.iconData,
     required this.color,
-    required this.date,
+    //required this.date,
   });
 }
 
@@ -263,7 +263,7 @@ List<Transaction> transactions = [
     iconData: Icons.lunch_dining,
     color: Colors.yellow,
     //date: 2,
-    date: DateTime.now()
+    //date: DateTime.now()
   ),
   Transaction(
     title: 'Books',
@@ -272,7 +272,7 @@ List<Transaction> transactions = [
     iconData: Icons.school,
     color: Colors.deepPurple,
     //date:3,
-    date: DateTime.now(),
+    //date: DateTime.now(),
   
   ),
   Transaction(
@@ -282,7 +282,7 @@ List<Transaction> transactions = [
     iconData: Icons.shopping_bag,
     color: Colors.blue,
     //date: 6,
-    date:DateTime.now()
+    //date:DateTime.now()
   ),
   Transaction(
     title: 'Petrol',
@@ -291,7 +291,7 @@ List<Transaction> transactions = [
     iconData: Icons.car_rental,
     color: Colors.purpleAccent,
     //date: 7,
-    date:DateTime.now()
+    //date:DateTime.now()
   ),
   Transaction(
     title: 'vedio games',
@@ -300,7 +300,7 @@ List<Transaction> transactions = [
     iconData: Icons.tv,
     color: Colors.greenAccent,
     //date: 8,
-    date:DateTime.now()
+    //date:DateTime.now()
   ),
   Transaction(
     title: 'Tablet',
@@ -309,7 +309,7 @@ List<Transaction> transactions = [
     iconData: Icons.local_hospital,
     color: Colors.redAccent,
     //date:5,
-    date:DateTime.now()
+    //date:DateTime.now()
   ),
   Transaction(
     title: 'Electricity Bill',
@@ -318,7 +318,7 @@ List<Transaction> transactions = [
     iconData: Icons.receipt_long,
     color: Colors.orangeAccent,
     //date: 5,
-    date:DateTime.now()
+    //date:DateTime.now()
   ),
   Transaction(
     title: 'Birthday gift',
@@ -327,7 +327,7 @@ List<Transaction> transactions = [
     iconData: Icons.card_giftcard,
     color: Colors.pink,
     //date: 2,
-    date:DateTime.now()
+    //date:DateTime.now()
   ),
   Transaction(
     title: 'xyz',
@@ -336,7 +336,7 @@ List<Transaction> transactions = [
     iconData: Icons.add_circle,
     color: Colors.grey,
     //date: 4,
-   date: DateTime.now()
+  // date: DateTime.now()
   ),
 ];
 
@@ -375,7 +375,7 @@ class TransactionItem extends StatelessWidget {
           ),
 
           subtitle: Text(
-            '${transactions.title}  ${DateFormat('dd MMM yyyy').format(DateTime.now())}',
+            '${transactions.title}',
             
             style: TextStyle(
               fontSize: 14,
