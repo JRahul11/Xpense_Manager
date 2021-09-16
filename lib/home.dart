@@ -4,6 +4,8 @@ import 'pages/dashboard.dart';
 import 'pages/stats.dart';
 import 'pages/payment.dart';
 import 'pages/profile.dart';
+import 'pages/transaction.dart';
+
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -19,6 +21,7 @@ class _HomeState extends State<Home> {
     Stats(),
     Payment(),
     Profile(),
+    Add(),
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
@@ -33,7 +36,13 @@ class _HomeState extends State<Home> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {setState(
+                        () {
+                          currentScreen = Add();
+                          currentTab = 4;
+                        },
+                      );
+},
         backgroundColor: Colors.indigo,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
