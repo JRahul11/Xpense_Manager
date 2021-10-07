@@ -16,5 +16,5 @@
 
 Steps to run the project:
 1. Firstly run the pubspec.yaml file to install all the necessary dependencies on your system.
-2. Next create a firestore project for your app on https://firebase.google.com/.
+2. Next create a firestore project for your app on https://firebase.google.com/ and turn on google authentication.
 3. Finally, to connect the app to your firebase, include the google-services.json file in Your-Project-Name/android/app/ folder.
