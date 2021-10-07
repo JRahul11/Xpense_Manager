@@ -4,6 +4,7 @@ import 'pages/dashboard.dart';
 import 'pages/stats.dart';
 import 'pages/payment.dart';
 import 'pages/profile.dart';
+import 'pages/add.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -19,6 +20,7 @@ class _HomeState extends State<Home> {
     Stats(),
     Payment(),
     Profile(),
+    Add(),
   ];
 
   final PageStorageBucket bucket = PageStorageBucket();
@@ -27,13 +29,21 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: PageStorage(
         child: currentScreen,
         bucket: bucket,
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () {
+          setState(
+            () {
+              currentScreen = Add();
+              currentTab = -1;
+            },
+          );
+        },
         backgroundColor: Colors.indigo,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -49,7 +59,7 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MaterialButton(
-                    minWidth: 40,
+                    // minWidth: 20,
                     onPressed: () {
                       setState(
                         () {
@@ -66,8 +76,9 @@ class _HomeState extends State<Home> {
                           color: currentTab == 0 ? Colors.indigo : Colors.grey,
                         ),
                         Text(
-                          'Dashboard',
+                          'Home',
                           style: TextStyle(
+                              fontFamily: 'Helvetica',
                               color: currentTab == 0
                                   ? Colors.indigo
                                   : Colors.grey),
@@ -76,7 +87,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   MaterialButton(
-                    minWidth: 40,
+                    minWidth: 50,
                     onPressed: () {
                       setState(
                         () {
@@ -95,6 +106,7 @@ class _HomeState extends State<Home> {
                         Text(
                           'Stats',
                           style: TextStyle(
+                              fontFamily: 'Helvetica',
                               color: currentTab == 1
                                   ? Colors.indigo
                                   : Colors.grey),
@@ -108,7 +120,7 @@ class _HomeState extends State<Home> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MaterialButton(
-                    minWidth: 40,
+                    minWidth: 70,
                     onPressed: () {
                       setState(
                         () {
@@ -127,6 +139,7 @@ class _HomeState extends State<Home> {
                         Text(
                           'Payment',
                           style: TextStyle(
+                              fontFamily: 'Helvetica',
                               color: currentTab == 2
                                   ? Colors.indigo
                                   : Colors.grey),
@@ -135,7 +148,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   MaterialButton(
-                    minWidth: 40,
+                    minWidth: 70,
                     onPressed: () {
                       setState(
                         () {
@@ -154,6 +167,7 @@ class _HomeState extends State<Home> {
                         Text(
                           'Profile',
                           style: TextStyle(
+                              fontFamily: 'Helvetica',
                               color: currentTab == 3
                                   ? Colors.indigo
                                   : Colors.grey),
