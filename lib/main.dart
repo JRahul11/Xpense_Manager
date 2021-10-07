@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'pages/login.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  // This widget is the root of your application.
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -15,12 +17,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Xpense Manager',
       theme: ThemeData(
+        fontFamily: 'Helvetica',
         primarySwatch: Colors.indigo,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Home(),
+      home: Login(),
       debugShowCheckedModeBanner: false,
     );
   }
