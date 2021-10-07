@@ -10,9 +10,12 @@
 <br>
 <img src="https://user-images.githubusercontent.com/62005970/136448842-2fb18ec2-d2f1-4765-8be6-76a082cdfe1a.jpg" width="300" height="600">
 <br>
- <img src="https://user-images.githubusercontent.com/62005970/136448855-cbcb5747-f07f-4756-88a3-c169c3b1db4a.jpg" width="300" height="600">
- <br>
- <img src="https://user-images.githubusercontent.com/62005970/136448883-15e00bba-1301-4a96-87b7-0dd0f79e8930.jpg" width="300" height="600">
+<img src="https://user-images.githubusercontent.com/62005970/136452709-a39903fe-de8c-45ad-8057-0c4ab98ce1ab.jpg" width="300" height="600">
+<br>
+<img src="https://user-images.githubusercontent.com/62005970/136448855-cbcb5747-f07f-4756-88a3-c169c3b1db4a.jpg" width="300" height="600">
+<br>
+<img src="https://user-images.githubusercontent.com/62005970/136448883-15e00bba-1301-4a96-87b7-0dd0f79e8930.jpg" width="300" height="600">
+<br>
 
 Steps to run the project:
 1. Firstly run the pubspec.yaml file to install all the necessary dependencies on your system.
