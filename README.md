@@ -1,4 +1,4 @@
-**Xpense Manager**
+# Xpense Manager
 
 <img src="https://user-images.githubusercontent.com/62005970/136451601-3c064308-02a0-42e9-a7c8-692d5222355c.jpg" width="300" height="600">
 <br>
