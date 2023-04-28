@@ -14,8 +14,6 @@
 <br>
 <img src="https://user-images.githubusercontent.com/62005970/136448855-cbcb5747-f07f-4756-88a3-c169c3b1db4a.jpg" width="300" height="600">
 <br>
-<img src="https://user-images.githubusercontent.com/62005970/136448883-15e00bba-1301-4a96-87b7-0dd0f79e8930.jpg" width="300" height="600">
-<br>
 
 Steps to run the project:
 1. Firstly run the pubspec.yaml file to install all the necessary dependencies on your system.
